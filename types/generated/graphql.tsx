@@ -14,7 +14,7 @@ export type Scalars = {
   Int: number;
   Float: number;
   timestamptz: any;
-  uuid: any;
+  uuid: string;
 };
 
 /** Boolean expression to compare columns of type "String". All fields are combined with logical 'AND'. */
@@ -1235,14 +1235,14 @@ export type CreateUserMutationVariables = Exact<{
 }>;
 
 
-export type CreateUserMutation = { __typename?: 'mutation_root', insert_users_one?: { __typename?: 'users', id: any, name: string, created_at: any } | null };
+export type CreateUserMutation = { __typename?: 'mutation_root', insert_users_one?: { __typename?: 'users', id: string, name: string, created_at: any } | null };
 
 export type DeleteUserMutationVariables = Exact<{
   id: Scalars['uuid'];
 }>;
 
 
-export type DeleteUserMutation = { __typename?: 'mutation_root', delete_users_by_pk?: { __typename?: 'users', id: any } | null };
+export type DeleteUserMutation = { __typename?: 'mutation_root', delete_users_by_pk?: { __typename?: 'users', id: string } | null };
 
 export type UpdateUserMutationVariables = Exact<{
   id: Scalars['uuid'];
@@ -1250,29 +1250,29 @@ export type UpdateUserMutationVariables = Exact<{
 }>;
 
 
-export type UpdateUserMutation = { __typename?: 'mutation_root', update_users_by_pk?: { __typename?: 'users', id: any, name: string, created_at: any } | null };
+export type UpdateUserMutation = { __typename?: 'mutation_root', update_users_by_pk?: { __typename?: 'users', id: string, name: string, created_at: any } | null };
 
 export type GetAllUsersQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetAllUsersQuery = { __typename?: 'query_root', users: Array<{ __typename?: 'users', id: any, name: string, created_at: any }> };
+export type GetAllUsersQuery = { __typename?: 'query_root', users: Array<{ __typename?: 'users', id: string, name: string, created_at: any }> };
 
 export type GetAllUsersLocalQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetAllUsersLocalQuery = { __typename?: 'query_root', users: Array<{ __typename?: 'users', id: any, name: string, created_at: any }> };
+export type GetAllUsersLocalQuery = { __typename?: 'query_root', users: Array<{ __typename?: 'users', id: string, name: string, created_at: any }> };
 
 export type GetUserIdsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetUserIdsQuery = { __typename?: 'query_root', users: Array<{ __typename?: 'users', id: any }> };
+export type GetUserIdsQuery = { __typename?: 'query_root', users: Array<{ __typename?: 'users', id: string }> };
 
 export type GetUserByIdQueryVariables = Exact<{
   id: Scalars['uuid'];
 }>;
 
 
-export type GetUserByIdQuery = { __typename?: 'query_root', users_by_pk?: { __typename?: 'users', id: any, name: string, created_at: any } | null };
+export type GetUserByIdQuery = { __typename?: 'query_root', users_by_pk?: { __typename?: 'users', id: string, name: string, created_at: any } | null };
 
 
 export const CreateUserDocument = gql`
